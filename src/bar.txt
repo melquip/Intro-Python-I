@@ -1,0 +1,3 @@
+Random set of lines
+To test if I can write
+A text file with python
