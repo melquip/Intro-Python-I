@@ -31,26 +31,6 @@ print(fibonacciMaxItems(13))
 
 # https://repl.it/@melquip/Code-Challenge-Harshad-numbers
 
-"""
-function isHarshadNum(n) {
-  return n % (n.toString().split("").reduce((sum, digit) => sum + parseInt(digit), 0)) === 0;
-}
-function harshad(number) {
-  let cluster = [];
-  if(isHarshadNum(number)) {
-    cluster.push(number);
-    for(let i = number + 1; isHarshadNum(i); i++) {
-      cluster.push(i);
-    }
-    for(let i = number - 1; isHarshadNum(i); i--) {
-      cluster.unshift(i);
-    }
-  }
-  const result = [cluster.length, cluster.indexOf(number) + 1];
-  console.log({number, result, cluster});
-  return result;
-}
-"""
 import sys
 
 def isHarshadNum(n):
@@ -76,13 +56,20 @@ def harshad(number):
     result = [len(cluster), cluster.index(number) + 1]
   return result
 
-print(harshad(5))        # [10,5]
-#print(harshad(133))      # [2,2]
-#print(harshad(82))       # [0,0]
-#print(harshad(72))       # [1,1]
-#print(harshad(12751223)) # [6,4]
-#print(harshad(5831))     # [3,1]
-#print(harshad(10309))    # [4,3]
-#print(harshad(7384))     # [0,0]
-#print(harshad(2584))     # [1,1]
-#print(harshad(1018))     # [0,0]
+print(harshad(5))          # [10,5]
+# print(harshad(133))      # [2,2]
+# print(harshad(82))       # [0,0]
+# print(harshad(72))       # [1,1]
+# print(harshad(12751223)) # [6,4]
+# print(harshad(5831))     # [3,1]
+# print(harshad(10309))    # [4,3]
+# print(harshad(7384))     # [0,0]
+# print(harshad(2584))     # [1,1]
+# print(harshad(1018))     # [0,0]
+
+# https://repl.it/@melquip/Code-Challenge-removeDuplicates
+
+def removeDuplicates(lst):
+  return set(lst)
+
+print(removeDuplicates([1,1,2,3,4,5,5])) # 1,2,3,4,5
